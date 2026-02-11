@@ -1,0 +1,4 @@
+{
+  "flawlesssvanaxfork:downloadmods-title-serverinstall": "<font color=\"ff0000\">You are currently missing mods.</font>",
+  "flawlesssvanaxfork:downloadmods-serverinstall": "You are missing {0} <font color=\"#ff0000\">non-public</font> mods to join this server! Do you want to attempt to <font color=\"#ff0000\">download them from the server?</font>"
+}

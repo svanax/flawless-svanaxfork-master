@@ -1,0 +1,16 @@
+/bin/
+/obj/
+.idea/
+.vscode/
+
+# blender backups
+*.blend1
+
+# large assets in blender dev kit
+/blender/images/moddb/kemonodansen.psd
+
+# blender test files
+/blender/test
+
+# store debug stuff
+debug

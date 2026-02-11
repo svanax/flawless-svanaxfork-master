@@ -1,0 +1,13 @@
+{
+  "type": "code",
+  "name": "Flawless Server Mod Manager",
+  "modid": "flawlesssvanaxfork",
+  "version": "0.0.7",
+
+  "description": "Download mods from server if not available on moddb",
+  "website": "http://gitlab.com/xeth/flawless",
+  "authors": [ "xeth","svanax" ],
+
+  "requiredOnClient": true,
+  "requiredOnServer": true,
+}
