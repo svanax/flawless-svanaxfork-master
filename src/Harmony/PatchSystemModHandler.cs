@@ -11,6 +11,7 @@ using Vintagestory.Common;
 
 namespace flawlesssvanaxfork;
 
+[HarmonyPatchCategory("flawlesssvanaxfork-client")]
 [HarmonyPatch(typeof(SystemModHandler), "StartMods")]
 public class PatchSystemModHandler
 {
@@ -62,10 +63,11 @@ public class PatchSystemModHandler
         Vintagestory.ClientNative.CrashReporter.LoadedMods.AddRange(addedServerMods);
         game.textureSize = modLoader.TextureSize;
 
-        ClientModState.ClientPreloadPhase2 = true;
-        modLoader.RunModPhase(ModRunPhase.Pre);
-        game.Logger.Notification("[flawlesssvanaxfork] Done loading and pre-starting client side mods (phase 2).");
 
+        ClientModState.ClientPreloadPhase2 = true;
+
+        game.Logger.Notification("[flawlesssvanaxfork] Server mods injected. Phase 2 active. Game will now call StartPre on server mods.");
+        
         return true;
     }
 }
