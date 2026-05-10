@@ -35,8 +35,8 @@ public class PatchSystemModHandler
             game.Logger.Notification($"[flawlesssvanaxfork] Adding server mod: {mod.FileName}");
 
         var prevEnabledSystems = modLoader.GetField<List<ModSystem>>("enabledSystems");
-        var prevContentAssetOrigins = modLoader.GetField<OrderedDictionary<string, IAssetOrigin>>("contentAssetOrigins");
-        var prevThemeAssetOrigins = modLoader.GetField<OrderedDictionary<string, IAssetOrigin>>("themeAssetOrigins");
+        var prevContentAssetOrigins = modLoader.GetField<Vintagestory.API.Datastructures.OrderedDictionary<string, IAssetOrigin>>("contentAssetOrigins");
+        var prevThemeAssetOrigins = modLoader.GetField<Vintagestory.API.Datastructures.OrderedDictionary<string, IAssetOrigin>>("themeAssetOrigins");
 
         addedServerMods.CallMethod("CheckDuplicateModIDMods", addedServerMods);
         foreach (var mod in addedServerMods)
@@ -45,8 +45,8 @@ public class PatchSystemModHandler
 
         modLoader.CallMethod("ClearCacheFolder", addedServerMods);
         var addedEnabledSystems = modLoader.CallMethod<List<ModSystem>>("instantiateMods", addedServerMods);
-        var addedContentAssetOrigins = modLoader.GetField<OrderedDictionary<string, IAssetOrigin>>("contentAssetOrigins");
-        var addedThemeAssetOrigins = modLoader.GetField<OrderedDictionary<string, IAssetOrigin>>("themeAssetOrigins");
+        var addedContentAssetOrigins = modLoader.GetField<Vintagestory.API.Datastructures.OrderedDictionary<string, IAssetOrigin>>("contentAssetOrigins");
+        var addedThemeAssetOrigins = modLoader.GetField<Vintagestory.API.Datastructures.OrderedDictionary<string, IAssetOrigin>>("themeAssetOrigins");
 
         foreach (var kv in addedContentAssetOrigins)
             prevContentAssetOrigins.Add(kv.Key, kv.Value);
