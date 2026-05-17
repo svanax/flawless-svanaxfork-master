@@ -207,7 +207,7 @@ public class GuiScreenDownloadServerMods : GuiScreen
     {
         flawless.Harmony?.UnpatchAll();
         GuiIsOpen = false;
-        game.DestroyGameSession(true);
+        game.DestroyGameSession(true, EnumExitMode.None);
         ScreenManager.ConnectToMultiplayer(connectdata.HostRaw, connectdata.ServerPassword);
         return true;
     }
@@ -276,6 +276,6 @@ public class GuiScreenDownloadServerMods : GuiScreen
     {
         GuiIsOpen = false;
         flawless.Harmony?.UnpatchAll();
-        game.DestroyGameSession(true);
+        game.DestroyGameSession(true, EnumExitMode.None);
     }
 }

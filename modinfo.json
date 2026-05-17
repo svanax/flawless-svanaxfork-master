@@ -2,7 +2,7 @@
   "type": "code",
   "name": "Flawless Server Mod Manager",
   "modid": "flawlesssvanaxfork",
-  "version": "1.0.3",
+  "version": "1.0.4",
 
   "description": "Download mods from server if not available on moddb",
   "authors": [ "xeth","svanax" ],
